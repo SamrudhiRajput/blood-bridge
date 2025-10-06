@@ -1,0 +1,67 @@
+/* Shared styles for Blood Bridge template */
+:root{
+  --red:#c82333;
+  --dark:#262626;
+  --muted:#6b6b6b;
+  --bg:#f6f7f8;
+  --container:1100px;
+  --radius:10px;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, "Segoe UI", Arial, sans-serif;background:var(--bg);color:var(--dark);margin:0;line-height:1.5}
+.container{max-width:var(--container);margin:0 auto;padding:0 1rem}
+.site-header{background:#fff;border-bottom:1px solid #eee;box-shadow:0 2px 6px rgba(0,0,0,0.02)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+.brand{display:flex;gap:0.8rem;align-items:center}
+.logo{width:56px;height:56px}
+.brand h1{font-size:1.25rem;margin:0}
+.tagline{font-size:0.85rem;color:var(--muted);margin:0}
+.main-nav a{margin-left:1rem;text-decoration:none;color:var(--dark);padding:0.4rem 0.6rem;border-radius:6px}
+.main-nav a.active, .main-nav a:hover{background:var(--red);color:#fff}
+
+/* Hero */
+.hero{padding:3.2rem 0;background:linear-gradient(180deg,#fff 60%, #fff0 100%)}
+.hero-inner{display:flex;gap:2rem;align-items:center}
+.hero-text{flex:1}
+.hero-text h2{color:var(--red);font-size:2rem;margin-bottom:0.5rem}
+.hero-text p{color:var(--muted);margin-bottom:1rem}
+.hero-actions .btn{margin-right:0.5rem}
+.hero-illustration img{width:320px;max-width:40rem;border-radius:12px;box-shadow:0 8px 30px rgba(200,33,51,0.08)}
+
+/* cards / forms */
+.form-card, .table-card, .about-card{background:#fff;padding:1.6rem;border-radius:var(--radius);box-shadow:0 6px 20px rgba(35,40,45,0.04);margin:1.6rem 0}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-grid label{display:flex;flex-direction:column;font-size:0.9rem;color:var(--muted)}
+.form-grid input, .form-grid select{padding:0.65rem;border:1px solid #e6e6e6;border-radius:8px;margin-top:0.5rem}
+.fullwidth{grid-column:1/-1}
+.form-actions{display:flex;gap:0.6rem;align-items:center}
+.note{font-size:0.9rem;color:var(--muted);margin-top:0.8rem}
+
+/* buttons */
+.btn{display:inline-block;padding:0.6rem 1rem;border-radius:8px;border:0;cursor:pointer;font-weight:600}
+.primary{background:var(--red);color:#fff}
+.outline{background:transparent;border:1px solid #ddd;color:var(--dark)}
+
+/* features */
+.features{display:flex;gap:1rem;padding:1.6rem 0}
+.feature{flex:1;background:#fff;padding:1rem;border-radius:10px;box-shadow:0 6px 20px rgba(35,40,45,0.03)}
+.feature h3{color:var(--red)}
+
+/* table */
+.table-header{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:1rem}
+.table-header input{padding:0.6rem;border-radius:8px;border:1px solid #e6e6e6}
+table{width:100%;border-collapse:collapse}
+th, td{padding:0.8rem;border-bottom:1px solid #f0f0f0;text-align:left}
+th{background:#fafafa;color:var(--muted)}
+
+/* footer */
+.site-footer{padding:1.2rem 0;background:transparent;border-top:1px solid #eee;margin-top:2rem}
+.site-footer p{margin:0;color:var(--muted)}
+
+/* responsiveness */
+@media (max-width:900px){
+  .hero-inner{flex-direction:column}
+  .form-grid{grid-template-columns:1fr}
+  .main-nav{display:none}
+  .hero-illustration img{max-width:100%}
+}

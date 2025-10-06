@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Register as Donor — Blood Bridge</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="assets/logo.svg" alt="Blood Bridge logo" class="logo">
+        <div>
+          <h1>Blood Bridge</h1>
+          <p class="tagline">Donate blood • Save lives • Spread hope</p>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="register.html" class="active">Become Donor</a>
+        <a href="request.html">Request Blood</a>
+        <a href="donors.html">Available Donors</a>
+        <a href="about.html">About / Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="form-card">
+      <h2>Donor Registration</h2>
+      <p>Fill in your details and receive a professional donation certificate instantly.</p>
+
+      <form id="donorForm" class="form-grid">
+        <label>
+          Full Name
+          <input id="donorName" type="text" required placeholder="Your full name">
+        </label>
+        <label>
+          Age
+          <input id="donorAge" type="number" min="18" max="65" required placeholder="Age">
+        </label>
+        <label>
+          Blood Group
+          <select id="donorBlood" required>
+            <option value="">Select Blood Group</option>
+            <option>A+</option><option>A-</option><option>B+</option><option>B-</option>
+            <option>O+</option><option>O-</option><option>AB+</option><option>AB-</option>
+          </select>
+        </label>
+        <label>
+          City
+          <input id="donorCity" type="text" required placeholder="City">
+        </label>
+        <label>
+          Phone Number
+          <input id="donorPhone" type="tel" required placeholder="Mobile number">
+        </label>
+        <label class="fullwidth">
+          Any medical notes (optional)
+          <input id="donorNotes" type="text" placeholder="E.g., previous donations, minor conditions">
+        </label>
+
+        <div class="form-actions fullwidth">
+          <button class="btn primary" type="submit">Register & Download Certificate</button>
+          <button class="btn outline" id="previewBtn" type="button">Preview Certificate</button>
+        </div>
+      </form>
+      <p class="note">This demo stores donor data in your browser (localStorage). For a real system you'd send this securely to a server.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Blood Bridge • Made for college project</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

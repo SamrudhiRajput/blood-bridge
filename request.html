@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Request Blood — Blood Bridge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="assets/logo.svg" alt="Blood Bridge logo" class="logo">
+        <div>
+          <h1>Blood Bridge</h1>
+          <p class="tagline">Donate blood • Save lives • Spread hope</p>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="register.html">Become Donor</a>
+        <a href="request.html" class="active">Request Blood</a>
+        <a href="donors.html">Available Donors</a>
+        <a href="about.html">About / Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="form-card">
+      <h2>Request Blood</h2>
+      <p>Submit a request — donors in the area can reach out to help.</p>
+
+      <form id="requestForm" class="form-grid">
+        <label>
+          Patient Name
+          <input id="patientName" type="text" required placeholder="Patient name">
+        </label>
+        <label>
+          Required Blood Group
+          <select id="requiredBlood" required>
+            <option value="">Select Blood Group</option>
+            <option>A+</option><option>A-</option><option>B+</option><option>B-</option>
+            <option>O+</option><option>O-</option><option>AB+</option><option>AB-</option>
+          </select>
+        </label>
+        <label>
+          Hospital / Location
+          <input id="hospital" type="text" required placeholder="Hospital name / city">
+        </label>
+        <label>
+          Contact Number
+          <input id="requestPhone" type="tel" required placeholder="Phone number">
+        </label>
+        <label class="fullwidth">
+          Additional details
+          <input id="requestNotes" type="text" placeholder="Urgency, units required, etc.">
+        </label>
+
+        <div class="form-actions fullwidth">
+          <button class="btn primary" type="submit">Submit Request</button>
+          <button class="btn outline" id="clearRequests" type="button">Clear All Requests</button>
+        </div>
+      </form>
+
+      <div class="requests-list">
+        <h3>Recent Requests (Local Demo)</h3>
+        <ul id="requestsList"></ul>
+      </div>
+
+      <p class="note">Requests are stored locally for demo only.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Blood Bridge • Made for college project</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Available Donors — Blood Bridge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="assets/logo.svg" alt="Blood Bridge logo" class="logo">
+        <div>
+          <h1>Blood Bridge</h1>
+          <p class="tagline">Donate blood • Save lives • Spread hope</p>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="register.html">Become Donor</a>
+        <a href="request.html">Request Blood</a>
+        <a href="donors.html" class="active">Available Donors</a>
+        <a href="about.html">About / Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="table-card">
+      <div class="table-header">
+        <h2>Registered Donors</h2>
+        <div>
+          <input id="searchBox" placeholder="Search by name / city / blood group">
+          <button class="btn outline" id="exportCsv">Export CSV</button>
+        </div>
+      </div>
+
+      <table id="donorsTable">
+        <thead>
+          <tr><th>Name</th><th>Age</th><th>Blood Group</th><th>City</th><th>Phone</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <p class="note">Donor list is loaded from browser storage (demo). Integrate with backend for live data.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Blood Bridge • Made for college project</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
