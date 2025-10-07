@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#ff5f5f"/><stop offset="1" stop-color="#c82333"/></linearGradient></defs>
+  <rect width="120" height="120" rx="20" fill="#fff"/>
+  <circle cx="60" cy="44" r="28" fill="url(#g)"/>
+  <path d="M60 30 C54 44, 70 44, 60 68 C50 44,66 44,60 30 Z" fill="#fff"/>
+  <text x="60" y="102" font-family="Arial" font-size="12" text-anchor="middle" fill="#c82333">Blood Bridge</text>
+</svg>
